@@ -1,5 +1,5 @@
 object TimeHelpers {
-  
+
   case class TimeSpanBuilder(val len: Long){
     def seconds = TimeSpan(TimeHelpers.seconds(len))
     def second = seconds
