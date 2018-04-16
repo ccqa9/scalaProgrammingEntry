@@ -1,3 +1,5 @@
+import java.util.Date
+
 object TimeHelpers {
 
   case class TimeSpanBuilder(val len: Long){
@@ -16,8 +18,8 @@ object TimeHelpers {
   def seconds(in: Long): Long = in * 1000L
   def minutes(in: Long): Long = seconds(in) * 60L
   def hours(in: Long): Long   = minutes(in) * 60L
-  def days(in: Long): Long    = days(in) * 24L
-  def weeks(in: Long): Long   = weeks(in) * 7L
+  def days(in: Long): Long    = hours(in) * 24L
+  def weeks(in: Long): Long   = days(in) * 7L
 
   //
   implicit def longToTimeSpanBuilder(in: Long): TimeSpanBuilder =
