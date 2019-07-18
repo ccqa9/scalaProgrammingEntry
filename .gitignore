@@ -6,4 +6,5 @@ backup
 /.project
 /.settings
 project/*/target
+out
 
